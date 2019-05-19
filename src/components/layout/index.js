@@ -5,15 +5,31 @@ import Navbar from 'components/navbar'
 import Sidebar from 'components/sidebar'
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+      src: url('./fonts/Neutra-Text-Bold.otf') format('opentype');
+      font-family: bFont;
+  }
   html, body {
     margin: 0;
     padding: 0;
     background-color: #282c44;
+    font-family: bFont;
   }
+  
 `
 
 const StyledLayout = styled.main`
   color: whitesmoke;
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main-content";
+  grid-template-columns: minmax(min-content,max-content) 1fr;
+  grid-template-rows: repeat(minmax(min-content,max-content),2) ;
+
+  .content {
+    grid-area: main-content;
+  }
 `
 
 const useMedia = () => {
@@ -35,16 +51,18 @@ const useMedia = () => {
 }
 
 const Layout = ({ children }) => {
-  const media = useMedia()
+  const selectedMedia = useMedia()
   
   return (
     <>
       <GlobalStyle />
-      <Media media={media} />
+      <Media media={selectedMedia} />
         <StyledLayout>
           <Navbar />
           <Sidebar />
-          { children }
+            <div className="content">
+              { children }
+            </div>
         </StyledLayout>
     </>
   )

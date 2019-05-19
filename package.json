@@ -13,6 +13,7 @@
     "gatsby": "2.5.0",
     "gatsby-cli": "2.5.14",
     "gatsby-plugin-alias-imports": "1.0.5",
+    "gatsby-plugin-web-font-loader": "1.0.4",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "styled-components": "4.2.0"
