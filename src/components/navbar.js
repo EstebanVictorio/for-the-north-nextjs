@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const StyledNavbar = styled.nav`
   background: linear-gradient(to bottom right,darkblue, purple);
@@ -18,9 +19,9 @@ const StyledNavbar = styled.nav`
 
 const Navbar = () => (
   <StyledNavbar>
-    <a className="brand-navigation" href="/">
+    <Link className="brand-navigation" to="/">
       <span className="brand">FTN</span>
-    </a>
+    </Link>
   </StyledNavbar>
 )
 

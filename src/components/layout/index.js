@@ -29,6 +29,8 @@ const StyledLayout = styled.main`
 
   .content {
     grid-area: main-content;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
   }
 `
 
