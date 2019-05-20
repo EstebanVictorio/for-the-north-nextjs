@@ -36,20 +36,21 @@ const StyledLayout = styled.main`
 
 const useMedia = () => {
   const [media, setMedia] = useState('xs')
-  useEffect(() => {
-    if(window.matchMedia("min-width: 144px").matches){
-      setMedia('xs')
-    } else if(window.matchMedia("min-width: 240px").matches) {
-      setMedia('sm')
-    } else if(window.matchMedia("min-width: 420px").matches) {
-      setMedia('md')
-    } else if(window.matchMedia("min-width: 720px").matches) {
-      setMedia('lg')
-    } else if(window.matchMedia("min-width: 1080px").matches) {
-      setMedia('xl')
-    }
-  }, window.innerWidth)
-  return media
+  // useEffect(() => {
+
+  //   if(window.matchMedia("min-width: 144px").matches){
+  //     setMedia('xs')
+  //   } else if(window.matchMedia("min-width: 240px").matches) {
+  //     setMedia('sm')
+  //   } else if(window.matchMedia("min-width: 420px").matches) {
+  //     setMedia('md')
+  //   } else if(window.matchMedia("min-width: 720px").matches) {
+  //     setMedia('lg')
+  //   } else if(window.matchMedia("min-width: 1080px").matches) {
+  //     setMedia('xl')
+  //   }
+  // }, [])
+  // return media
 }
 
 const Layout = ({ children }) => {
