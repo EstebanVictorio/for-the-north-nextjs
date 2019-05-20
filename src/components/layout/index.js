@@ -50,7 +50,7 @@ const useMedia = () => {
   //     setMedia('xl')
   //   }
   // }, [])
-  // return media
+  return media
 }
 
 const Layout = ({ children }) => {
