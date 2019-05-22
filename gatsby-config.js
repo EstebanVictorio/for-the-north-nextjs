@@ -1,7 +1,20 @@
 module.exports = {
   pathPrefix: "/for-the-north-nextjs",
   plugins: [
-    'gatsby-plugin-styled-components',
+    {
+      {
+        resolve: `babel-plugin-styled-components`,
+        options: {
+          ssr: true,
+          displayName: false,
+        },
+      },
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        ssr: true,
+        displayName: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
