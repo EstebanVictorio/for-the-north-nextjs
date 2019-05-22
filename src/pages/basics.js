@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from 'components/layout'
 import PostHeading from 'components/post-heading'
-import PostParagraph from 'components/post-paragraph'
 import List from 'components/list'
 
 const StyledLink = styled.a`
@@ -14,6 +13,19 @@ const StyledImgWrapper = styled.div`
   justify-content: center;
   width: 100%;
 `
+
+const StyledPostParagraph = styled.p`
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 700;
+`
+
+
+const PostParagraph = ({ children }) => (
+  <StyledPostParagraph>
+    { children }
+  </StyledPostParagraph>
+)
 
 const Basics = () => {
   const exampleListPoints = [
