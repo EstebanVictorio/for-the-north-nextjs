@@ -268,8 +268,8 @@ const Basics = () => {
         </PostParagraph>
       <PostParagraph>
         This config allows us to run NextJS in development mode, so we can
-        run <code>yarn dev</code> in the terminal. This is a preference and
-        you might as well use <code>yarn next</code>.
+        run <pre><code>yarn dev</code></pre> in the terminal. This is a preference and
+        you might as well use <pre><code>yarn next</code></pre>.
       </PostParagraph>
       <PostParagraph>
         Now we're all set to start. The following step is to create a folder
