@@ -11,6 +11,12 @@ module.exports = {
           "js"
         ],
       }
+    },
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        displayName: false,
+      }
     }
   ]
 }
