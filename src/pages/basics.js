@@ -228,10 +228,14 @@ const Basics = () => {
         the following:
         <List elements={exampleListPoints} />
       </PostParagraph>
+
       <PostParagraph>
-        Before getting onto this, there are two pre-requisites that you need to
-        have installed on your machine:
+        <span>
+          Before getting onto this, there are two pre-requisites that you need to
+          have installed on your machine:
+        </span>
       </PostParagraph>
+
       <List elements={prerequisitePoints} />
       <PostParagraph>
         Being able to start is pretty easy. Open the editor of your choice,
