@@ -37,12 +37,12 @@ const StyledSidebar = styled.aside`
 
   .open {
     width: 120px;
-    background-image: url('./img/arrow-left.svg');
+    background-image: url('./public/img/arrow-left.svg');
   }
 
   .closed {
     width: 60px;
-    background-image: url('./img/arrow-right.svg');
+    background-image: url('./public/img/arrow-right.svg');
   }
 
 
@@ -99,13 +99,13 @@ const Sidebar = () => {
       <input className={open ? 'toggle open' : 'toggle closed'} type="button" onClick={handleOpenClick} />
         <Link className={open ? "navigation-link nav-open" : "navigation-link nav-closed"} to="/posts">
           <span className="nav-content">
-            <img className="nav-icon" src="img/forum.svg"/>
+            <img className="nav-icon" src="./public/img/forum.svg"/>
             <span className="nav-description">Posts</span>
           </span>
         </Link>
         <Link className={open ? "navigation-link nav-open" : "navigation-link nav-closed"} to="/about">
           <span className="nav-content">
-            <img className="nav-icon" src="img/help.svg"/>
+            <img className="nav-icon" src="./public/img/help.svg"/>
             <span className="nav-description">About</span>
           </span>
         </Link>

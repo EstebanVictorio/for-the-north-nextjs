@@ -6,7 +6,7 @@ import Sidebar from 'components/sidebar'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-      src: url('./fonts/Neutra-Text-Bold.otf') format('opentype');
+      src: url('./public/fonts/Neutra-Text-Bold.otf') format('opentype');
       font-family: bFont;
   }
   html, body {
