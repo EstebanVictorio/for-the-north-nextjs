@@ -231,8 +231,8 @@ const Basics = () => {
       <PostParagraph>
         Before getting onto this, there are two pre-requisites that you need to
         have installed on your machine:
-        <List elements={prerequisitePoints} />
       </PostParagraph>
+      <List elements={prerequisitePoints} />
       <PostParagraph>
         Being able to start is pretty easy. Open the editor of your choice,
         choose a folder to work from, and open a terminal on your computer
@@ -256,16 +256,20 @@ const Basics = () => {
         well as helping you with hot reloading so you don't have to start the
         server as many times as you would do everytime you performn an update
         to your code.
-        To do this, we can add the following line to
+      </PostParagraph>
+      <PostParagraph>
+      To do this, we can add the following line to
         the <code>scripts</code> field in <code>package.json</code>:
+      </PostParagraph>
         <PostParagraph>
           <pre>
             { packageJsonConfig }
           </pre>
+        </PostParagraph>
+      <PostParagraph>
         This config allows us to run NextJS in development mode, so we can
         run <code>yarn dev</code> in the terminal. This is a preference and
         you might as well use <code>yarn next</code>.
-        </PostParagraph>
       </PostParagraph>
       <PostParagraph>
         Now we're all set to start. The following step is to create a folder
@@ -366,7 +370,7 @@ const Basics = () => {
       </PostParagraph>
       <PostParagraph>
         This means that your app is ready to be used, and you can access it via 
-        entering <code>http://localhost:300</code> in the address bar,
+        entering <code>http://localhost:3000</code> in the address bar,
         which will lead to something like this:
       </PostParagraph>
       <StyledImgWrapper>
