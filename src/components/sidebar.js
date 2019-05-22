@@ -37,12 +37,12 @@ const StyledSidebar = styled.aside`
 
   .open {
     width: 120px;
-    background-image: url('./public/img/arrow-left.svg');
+    background-image: url('/for-the-north-nextjs/img/arrow-left.svg');
   }
 
   .closed {
     width: 60px;
-    background-image: url('./public/img/arrow-right.svg');
+    background-image: url('/for-the-north-nextjs/img/arrow-right.svg');
   }
 
 
