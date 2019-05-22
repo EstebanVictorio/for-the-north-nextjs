@@ -14,17 +14,19 @@ const StyledImgWrapper = styled.div`
   width: 100%;
 `
 
-const StyledPostParagraph = styled.p`
-  padding: 10px;
-  font-size: 24px;
-  font-weight: 700;
+const StyledParagraphsWrapper = styled.div`
+  p {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 700;
+  }
 `
 
 
-const PostParagraph = ({ children }) => (
-  <StyledPostParagraph>
+const ParagraphsWrapper = ({ children }) => (
+  <StyledParagraphsWrapper>
     { children }
-  </StyledPostParagraph>
+  </StyledParagraphsWrapper>
 )
 
 const Basics = () => {
@@ -209,12 +211,13 @@ const Basics = () => {
       <PostHeading>
         How to React really fast - Part 1: Pages
       </PostHeading>
-      <PostParagraph>
+      <StyledParagraphsWrapper>
+      <p>
         Have you ever found yourself in practicing some React,
         in your environment, but felt like it was way too much setup
         for some simple practicing? No worries.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         <StyledLink
           target="_blank"
           rel="noopener noreferrer"
@@ -222,72 +225,72 @@ const Basics = () => {
         >
           NextJS
         </StyledLink> got you covered.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         How come do we need to Webpack everytime you ask? That might be the case,
         but that particular task doesn't everytime land on you, dear developer.
         We just need to reach out our research a little longer or further.
         Enter NextJS.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         NextJS is a React framework that allows you to deliver your React apps
         faster.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Let's jump into it. You never buy someone's idea or suggestion without a
         showcase of it. So... Let's say we want to build just a veeery basic
         but descriptive page about a product. This might be composed of
         the following:
         <List elements={exampleListPoints} />
-      </PostParagraph>
+      </p>
 
-      <PostParagraph>
+      <p>
         <span>
           Before getting onto this, there are two pre-requisites that you need to
           have installed on your machine:
         </span>
-      </PostParagraph>
+      </p>
 
       <List elements={prerequisitePoints} />
-      <PostParagraph>
+      <p>
         Being able to start is pretty easy. Open the editor of your choice,
         choose a folder to work from, and open a terminal on your computer
         as well. After these minor steps, run any of the following:
-        <PostParagraph>
+        <p>
         <code>
           npm i --save next react react-dom
         </code>
-        <PostParagraph>
+        <p>
           Or, if you prefer...
-        </PostParagraph>
+        </p>
         <code>
           yarn add next react react-dom
         </code>
-        </PostParagraph>
-      </PostParagraph>
-      <PostParagraph>
+        </p>
+      </p>
+      <p>
         Now, before beginning to code our pages, there is a tiny step we should
         do if we do not want to use the terminal (very often). NextJS allows you
         to start a server which serves your app and your pages along with it, as
         well as helping you with hot reloading so you don't have to start the
         server as many times as you would do everytime you performn an update
         to your code.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
       To do this, we can add the following line to
         the <code>scripts</code> field in <code>package.json</code>:
-      </PostParagraph>
-        <PostParagraph>
+      </p>
+        <p>
           <pre>
             { packageJsonConfig }
           </pre>
-        </PostParagraph>
-      <PostParagraph>
+        </p>
+      <p>
         This config allows us to run NextJS in development mode, so we can
         run <pre><code>yarn dev</code></pre> in the terminal. This is a preference and
         you might as well use <pre><code>yarn next</code></pre>.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Now we're all set to start. The following step is to create a folder
         named <code>pages</code>, as well as a <code>layout</code> component
         in our root directory, so we create the following file structure:
@@ -296,16 +299,16 @@ const Basics = () => {
             { folderStructure }
            </code>
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Now, we can proceed to code our very first NextJS-based React app.
         As our main component driving navigation towards the app, we'll build
         the <code>Layout</code> component:
         <pre>
           { layoutComponentSample }
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Let's dive a little into what happens here. First, we need a way to
         navigate across the site. Of course, we could do this purely with <code>
           anchor
@@ -316,8 +319,8 @@ const Basics = () => {
         still enclose the text content inside an <code>anchor</code> tag
         due to deprecation using text-only, but that makes no harm to the
         navigation.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Something to point out here is that we're using a very particular
         syntax here, called <code>destructuring assignment</code>. We're
         not diving here too deep into that, but this is a feature of the
@@ -328,8 +331,8 @@ const Basics = () => {
         all of the properties you provided. If you try to unwrap a property
         that's not injected, you will get the <code>undefined</code> value.
         This is JavaScript behavior itself, not a React one.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         One last thing here that allows us to have the <code>nav</code>
         element in all pages is the property <code>children</code>.
         This property represents the elements that are wrapped inside a
@@ -337,8 +340,8 @@ const Basics = () => {
         <pre>
         { layoutCommentComponentSample }
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Now, for our first page, there's <code>index.js</code>, which will respond
         automatically to the <code>/</code> route. We would write something
         like:
@@ -348,22 +351,22 @@ const Basics = () => {
           }
         </pre>
         This would tell NextJS that this is our first page module.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         Then, we'll write our <code>/about</code> page code, describing the
         product:
         <pre>
           { aboutSample }
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         And finally, the last page, where we'll let our users to check where
         they can reach the company out, the <code>/contact</code> page:
         <pre>
           { contactSample }
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         After this, we can run the command we set at the
         <code>scripts</code> field in <code>package.json</code>,
         which is <code>npm dev</code> or <code>yarn dev</code>,
@@ -374,8 +377,8 @@ const Basics = () => {
           nextJSFolderStructure
         }
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         When that folder appears, it means that Next built your app, which
         means that you also got some messages like the following:
         <pre>
@@ -383,16 +386,16 @@ const Basics = () => {
             buildMsgs
           }
         </pre>
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         This means that your app is ready to be used, and you can access it via 
         entering <code>http://localhost:3000</code> in the address bar,
         which will lead to something like this:
-      </PostParagraph>
+      </p>
       <StyledImgWrapper>
       <img src="https://media.giphy.com/media/LOzodNjCkZ2ufrk7Vo/giphy.gif" />
       </StyledImgWrapper>
-      <PostParagraph>
+      <p>
         What happened is that Next took care of using Webpack under the hood
         for the required dependencies to create and develop our app, so we can
         completely focus on the features rather than the setup. This is a way
@@ -400,11 +403,12 @@ const Basics = () => {
         learn further or analyze our options at the time of choosing how we want
         to React in different use cases. This one of those, and it lets us
         step forward relatively fast.
-      </PostParagraph>
-      <PostParagraph>
+      </p>
+      <p>
         And that's it! You created a web app that has a tiny setup letting you
         develop your features in a comfortable way!
-      </PostParagraph>
+      </p>
+      </StyledParagraphsWrapper>
     </Layout>
   )
 }
