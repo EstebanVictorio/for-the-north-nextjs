@@ -99,13 +99,13 @@ const Sidebar = () => {
       <input className={open ? 'toggle open' : 'toggle closed'} type="button" onClick={handleOpenClick} />
         <Link className={open ? "navigation-link nav-open" : "navigation-link nav-closed"} to="/posts">
           <span className="nav-content">
-            <img className="nav-icon" src="img/forum.svg"/>
+            <img className="nav-icon" src="/for-the-north-nextjs/img/forum.svg"/>
             <span className="nav-description">Posts</span>
           </span>
         </Link>
         <Link className={open ? "navigation-link nav-open" : "navigation-link nav-closed"} to="/about">
           <span className="nav-content">
-            <img className="nav-icon" src="img/help.svg"/>
+            <img className="nav-icon" src="/for-the-north-nextjs/img/help.svg"/>
             <span className="nav-description">About</span>
           </span>
         </Link>
