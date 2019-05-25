@@ -18,7 +18,7 @@ const StyledNavbar = styled.nav`
 `
 
 const Navbar = () => (
-  <StyledNavbar>
+  <StyledNavbar className="navbar">
     <Link className="brand-navigation" to="/">
       <span className="brand">FTN</span>
     </Link>

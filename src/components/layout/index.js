@@ -21,17 +21,52 @@ const GlobalStyle = createGlobalStyle`
 const StyledLayout = styled.main`
   color: whitesmoke;
   display: grid;
-  grid-template-areas:
-    "navbar navbar"
-    "sidebar main-content";
-  grid-template-columns: minmax(min-content,max-content) 1fr;
-  grid-template-rows: repeat(minmax(min-content,max-content),2) ;
 
   .content {
     grid-area: main-content;
-    height: calc(100vh - 60px);
     overflow-y: auto;
   }
+
+  @media screen and (min-width: 144px) {
+    grid-template-areas:
+    "navbar"
+    "sidebar"
+    "main-content";
+    grid-template-columns: none;
+    .sidebar {
+      height: unset;
+      width: 100%;
+
+      .toggle {
+        display: none;
+      }
+
+      .navigation-link {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        .nav-description {
+          display: inline-block;
+        }
+      }
+    }
+    .content {
+      height: calc(100vh - 146px);
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    grid-template-areas:
+    "navbar navbar"
+    "sidebar main-content";
+    grid-template-columns: minmax(min-content,max-content) 1fr;
+    grid-template-rows: repeat(minmax(min-content,max-content),2);
+
+    .content {
+      height: calc(100vh - 60px);
+    }
+  }
+
 `
 
 const useMedia = () => {

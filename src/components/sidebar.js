@@ -95,7 +95,7 @@ const Sidebar = () => {
   const [open, setOpen] = useState(true)
   const handleOpenClick = () => setOpen(!open)
   return (
-    <StyledSidebar className={open ? 'open' : 'closed'}>
+    <StyledSidebar className={open ? 'open sidebar' : 'closed sidebar'}>
       <input className={open ? 'toggle open' : 'toggle closed'} type="button" onClick={handleOpenClick} />
         <Link className={open ? "navigation-link nav-open" : "navigation-link nav-closed"} to="/posts">
           <span className="nav-content">

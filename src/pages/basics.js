@@ -211,7 +211,7 @@ const Basics = () => {
       <PostHeading>
         How to React really fast - Part 1: Pages
       </PostHeading>
-      <StyledParagraphsWrapper>
+      <ParagraphsWrapper>
       <p>
         Have you ever found yourself in practicing some React,
         in your environment, but felt like it was way too much setup
@@ -408,7 +408,7 @@ const Basics = () => {
         And that's it! You created a web app that has a tiny setup letting you
         develop your features in a comfortable way!
       </p>
-      </StyledParagraphsWrapper>
+      </ParagraphsWrapper>
     </Layout>
   )
 }
